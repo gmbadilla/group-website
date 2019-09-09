@@ -1,0 +1,549 @@
+/*
+-----------------------------------------------------------------------------
+  Fuentes
+-----------------------------------------------------------------------------
+*/
+@font-face {
+  font-family: 'Motion Control';
+  src:url(../fonts/MotionControl-Bold.otf) format('woff');
+  font-weight: 100;
+}
+
+
+
+/*
+-----------------------------------------------------------------------------
+reset
+-----------------------------------------------------------------------------
+*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  list-style: none;
+}
+
+html{ scroll-behavior: smooth; }
+body{
+    width:auto;
+    height: 100vh;
+    overflow: hidden;
+    /*overflow-y: hidden;
+    overflow-x: scroll;*/
+    /*background: #333;   */
+}
+
+#personas{
+    width:1000vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+#personas > div{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* contenedor del boton y el nombre*/
+#personas > div > .contenedor{
+  /*outline: 1px solid red;*/
+  position: absolute;
+  width: 23.5vw;
+  height: 43%;
+  display: flex;
+  top:24%;
+  left:26%; 
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+
+}
+/* boton de cada usuario*/
+#personas > div .boton{
+    width: 15vw;
+    height: 5vw;
+    background: #ccc;
+    cursor: pointer;
+    position: relative;
+   /* left:35%;
+    top:55%;*/
+}
+
+#personas > div .boton:after{
+  content: '';
+  width: 0%;
+  height: 100%;
+  background: red;
+  display: inline-block;
+  position: relative;
+  /*z-index: -1;*/
+}
+#personas > div .boton:hover:after{
+  transition: .5s ease-out;
+  transition-delay: .1s;
+  width: 100%;
+}
+#personas > div .boton > a{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  
+}
+#personas > div .boton > a > h2{
+  width: 90%;
+  height: 90%; 
+  font-family: 'Motion Control';
+  font-size: 4em;
+  color: #000;
+  position: absolute;
+  z-index: 2;
+  margin:8% 0 0 6%; 
+  
+}
+/*#personas > div .boton > a > h2:hover{
+  transition: .5s;
+  transition-delay: .2s;
+  color:#fff;
+}*/
+
+
+
+
+/* nombre de cada persona*/
+.titulo{
+    font-family: 'Motion Control';
+    font-size: 10em;
+    color:#000;
+    width:100%;
+    height: 20vh;
+    position: relative;
+    z-index: 2;
+    line-height: .9em;
+    /*top:46%;
+    right: -16.5%;*/
+    
+}
+/* fotografia de cada persona*/
+img{
+    width: 30vw;
+    position: relative;
+    left: 22vw;
+    bottom: 2vh;
+    /*outline: 1px solid red;*/
+}
+
+/* edicion de cada fotografia de cada persona con el titulo y el boton al proyecto*/
+
+/*foto glenda*/
+div:nth-child(1) > img{
+    width: 46vw;
+    left: 29vw;
+}
+
+/*foto emmanuel*/
+div:nth-child(2) > img{
+  width: 43vw;
+  left: 22vw;
+  bottom: -2vh;
+}
+
+/*foto jacky*/
+div:nth-child(3) > img{
+  width: 61vw;
+  left: 22vw;
+  bottom: -6vh;
+}
+
+/*foto naomi*/
+div:nth-child(4) > img{
+  width: 35vw;
+  left: 21.7vw;
+  bottom: -5vh;
+}
+
+/*foto adrian*/
+div:nth-child(5) > img{
+  width: 45vw;
+  left: 21.8vw;
+  bottom: -3vh;
+}
+
+/*foto kristel*/
+div:nth-child(6) > img{
+width: 50vw;
+left: 24.2vw;
+bottom: -15vh;
+}
+
+/*foto german*/
+div:nth-child(7) > img{
+width: 38vw;
+left: 24.7vw;
+bottom: -10vh;
+}
+
+/*foto elias*/
+div:nth-child(8) > img{
+width: 38.2vw;
+left: 21.5vw;
+bottom: -4vh;
+}
+
+/*foto maria*/
+div:nth-child(9) > img{
+width: 40vw;
+left: 20vw;
+bottom: -7vh;
+}
+
+/*foto yerlin*/
+div:nth-child(10) > img{
+width: 45vw;
+left: 27vw;
+bottom: -2vh; 
+}
+
+/*--------------contenedor de texto de cada persona----------*/
+/*contenedor del texto glenda*/
+#personas > div:nth-child(1) > .contenedor{
+    left:30%;
+}
+
+/*contenedor del texto emmanuel*/
+#personas > div:nth-child(2) > .contenedor{
+    left:30%;
+}
+
+/*contenedor del texto jacky*/
+#personas > div:nth-child(3) > .contenedor{
+    left:28%;
+}
+
+/*contenedor del texto naomi*/
+#personas > div:nth-child(4) > .contenedor{
+    left:40%;
+}
+
+/*contenedor del texto adrian*/
+#personas > div:nth-child(5) > .contenedor{
+    left:34%;
+}
+
+/*contenedor del texto kristel*/
+#personas > div:nth-child(6) > .contenedor{
+    left:35%;
+}
+
+/*contenedor del texto german*/
+#personas > div:nth-child(7) > .contenedor{
+    left:43%;
+}
+
+/*contenedor del texto elias*/
+#personas > div:nth-child(8) > .contenedor{
+    left:32%;
+}
+
+/*contenedor del texto maria*/
+#personas > div:nth-child(9) > .contenedor{
+    left:33%;
+}
+
+/*contenedor del texto yerlin*/
+#personas > div:nth-child(10) > .contenedor{
+    left:39%;
+}
+
+
+/*-------------------------color del boton en hover de cada persona-------------------*/
+/*color boton glenda*/
+#personas > div:nth-child(1) .boton:after{
+  background: #ff6a6b;
+}
+/*color boton emmanuel*/
+#personas > div:nth-child(2) .boton:after{
+  background: #8764c8;
+}
+
+/*color boton jacky*/
+#personas > div:nth-child(3) .boton:after{
+  background: #8764c8;
+}
+/*color boton naomi*/
+#personas > div:nth-child(4) .boton:after{
+  background: #8764c8;
+}
+/*color boton adrian*/
+#personas > div:nth-child(5) .boton:after{
+  background: #8764c8;
+}
+/*color boton kristel*/
+#personas > div:nth-child(6) .boton:after{
+  background: #b900f8;
+}
+/*color boton german*/
+#personas > div:nth-child(7) .boton:after{
+  background: #8764c8;
+}
+/*color boton elias*/
+#personas > div:nth-child(8) .boton:after{
+  background: #8764c8;
+}
+/*color boton maria*/
+#personas > div:nth-child(9) .boton:after{
+  background: #8764c8;
+}
+/*color boton yerling*/
+#personas > div:nth-child(10) .boton:after{
+  background: #8764c8;
+}
+
+/*experimento de color*/
+/* .colorB{
+  width: 20%;
+  height: 100vh;
+  position: absolute;
+  background:tomato; 
+  right: 8%;
+  z-index: 3;
+  mix-blend-mode: multiply;
+} */
+
+
+/*
+-----------------------------------------------------------------------------
+   inicio Menu estilos
+-----------------------------------------------------------------------------
+*/
+
+
+ /* flecha */
+ .triangle{
+	width: 30px;
+	height: 30px;
+	background: url(../images/flecha.svg) no-repeat;  
+  /* outline: 2px solid red;*/
+  cursor: pointer;
+	position: fixed;
+	top: 3vw;
+  left: 6vw;
+  z-index: 4;
+}
+ /*Animacion flecha hacia la derecha*/
+
+ .right { 
+   animation: flecha 2.5s ease-in-out infinite;
+ }
+
+ @keyframes flecha{
+	0%{transform: translateX(-10px);}
+	50%{transform: translateX(10px) scale(1.1);}
+	100%{transform: translateX(-10px);}
+ }
+
+/*Animacion flecha hacia la izquierda*/
+
+ .left {
+	 width: 30px;
+	 height: 30px;
+	 background: url(../images/flecha2.svg) no-repeat;
+	 position: fixed;
+	 transform: rotate(180deg);
+	 top: 3vw;
+   left: 6vw;
+   z-index: 4;
+   cursor: pointer;
+	 animation: flecha2 2.5s ease-in-out infinite;
+ }
+
+  @keyframes flecha2{
+	0%{transform: translateX(10px);}
+	50%{transform: translateX(-10px) scale(1.1);}
+	100%{transform: translateX(10px);}
+ }
+
+
+
+/*------------------menu---------------------------*/
+
+#menu{
+	width: 80vw;
+	height: 100vh;
+	position: fixed;
+  left:-200vh;
+  z-index: 4;
+}
+.nombre{
+	width:200vh;
+	height: 10vh;
+	display: flex;
+	align-items: center;
+}
+
+/*icono de participacion*/
+#menu > .nombre:nth-child(n) > .icono{
+  width: 2%;
+  height: 25%;
+  background: red;
+  z-index: 4;
+  position: relative;
+  top:8%;
+  left:85vw;
+}
+
+/*glenda*/
+#menu > .nombre:nth-child(1) > .icono{
+  background: url("../images/corona.svg") no-repeat center;
+}
+
+/*emmanuel*/
+#menu > .nombre:nth-child(2) > .icono{
+  left:83vw;
+  background: url("../images/corona.svg") no-repeat center;
+}
+
+/*jacky*/
+#menu > .nombre:nth-child(3) > .icono{
+  left:84vw;
+  background: url("../images/diamante.svg") no-repeat center;
+}
+
+/*naomi*/
+#menu > .nombre:nth-child(4) > .icono{
+  left:86.5vw;
+  background: url("../images/diamante.svg") no-repeat center;
+}
+
+/*adrian*/
+#menu > .nombre:nth-child(5) > .icono{
+  left:85vw;
+  background: url("../images/diamante.svg") no-repeat center;
+}
+
+/*kristel*/
+#menu > .nombre:nth-child(6) > .icono{
+  left:84vw;
+  background: url("../images/diamante.svg") no-repeat center;
+}
+
+/*german*/
+#menu > .nombre:nth-child(7) > .icono{
+  left:85vw;
+  background: url("../images/diamante.svg") no-repeat center;
+}
+
+/*elias*/
+#menu > .nombre:nth-child(8) > .icono{
+  left:87vw;
+  background: url("../images/corona.svg") no-repeat center;
+}
+
+/*maria*/
+#menu > .nombre:nth-child(9) > .icono{
+  left:85.5vw;
+  background: url("../images/corona.svg") no-repeat center;
+}
+
+/*maria*/
+#menu > .nombre:nth-child(10) > .icono{
+  left:86.2vw;
+  background: url("../images/diamante.svg") no-repeat center;
+}
+/*---------nombres texto----------------------------------------*/
+
+.nombre h2:nth-child(n){
+	width: 70vw;
+	color:#fff;
+	font-size: 1.5em;
+	font-family: sans-serif;
+	position: absolute;
+	text-align: right;
+	right: 1%;	
+}
+/*---------colores----------------------------------------*/
+.nombre:nth-of-type(n){
+	background: #222;
+}
+
+
+/*color del hover de cada nombre en el menu*/
+
+/*barra menu color glenda*/
+.nombre:nth-of-type(1):hover{
+  background: #ff6a6b;
+
+}
+/*barra menu color emmanuel*/
+.nombre:nth-of-type(2):hover{
+  background: #8764c8;
+
+}
+/*barra menu color jacky*/
+.nombre:nth-of-type(3):hover{
+  background: #e96b3c;
+
+}
+/*barra menu color naomi*/
+.nombre:nth-of-type(4):hover{
+  background: #e96b3c;
+
+}
+/*barra menu color adrian*/
+.nombre:nth-of-type(5):hover{
+  background: #e96b3c;
+
+}
+/*barra menu color kristel*/
+.nombre:nth-of-type(6):hover{
+  background: #b900f8;
+
+}
+/*barra menu color german*/
+.nombre:nth-of-type(7):hover{
+  background: #e96b3c;
+
+}
+/*barra menu color elias*/
+.nombre:nth-of-type(8):hover{
+  background: #e96b3c;
+
+}
+/*barra menu color maria*/
+.nombre:nth-of-type(9):hover{
+  background: #e96b3c;
+
+}
+/*barra menu color yerlin*/
+.nombre:nth-of-type(10):hover{
+  background: #e96b3c;
+
+}
+/*
+------------------------------------
+   final Menu estilos
+------------------------------------
+*/
+
+
+
+
+
+
+
+
+

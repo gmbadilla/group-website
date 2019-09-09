@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Group Website</title>
+	<link rel="stylesheet" href="bridge.css">
+</head>
+<body>
+	<div id="app">
+			<section id="menu">
+		
+					<div class="nombre">
+						<div class="icono"></div>
+						<a href="#p1"><h2>Glenda Badilla</h2></a>
+					</div>
+
+					<div class="nombre">
+						<div class="icono"></div>
+						<a href="#p2"><h2>Emmanuel Campos</h2></a>
+					</div>
+
+					<div class="nombre">
+						<div class="icono"></div>
+						<a href="#p3"><h2>Jackeline Cordero</h2></a>
+					</div>
+
+					<div class="nombre">
+						<div class="icono"></div>
+						<a href="#p4"><h2>Naomi Fallas</h2></a>
+					</div>
+
+					<div class="nombre">
+						<div class="icono"></div>
+						<a href="#p5"><h2>Adrián González</h2></a>
+					</div>
+
+					<div class="nombre">
+						<div class="icono"></div>
+						<a href="#p6"><h2>Kristel Hernández</h2></a>
+					</div>
+
+					<div class="nombre">
+						<div class="icono"></div>
+						<a href="#p7"><h2>German Herrera</h2></a>
+					</div>
+
+					<div class="nombre">
+						<div class="icono"></div>
+						<a href="#p8"><h2>Elías Rojas</h2></a></div>
+
+					<div class="nombre">
+						<div class="icono"></div>
+						<a href="#p9"><h2>María Salgado</h2></a>
+					</div>
+
+					<div class="nombre">
+						<div class="icono"></div>
+						<a href="#p0"><h2>Yerlin Vargas</h2></a>
+					</div>
+			</section>
+
+			<!-- Triangulito -->
+			<div id="flecha" class="triangle"></div>
+		
+ 		<section id="personas">
+			<persona
+				v-for="(dato, index) in info"
+				:key="index"
+				:indice="dato.id"
+				:img="dato.img"
+				:datos="dato.datos"
+				:name="dato.name"
+				:link="dato.href"
+			></persona>
+			
+		</section>
+		
+	</div>
+	
+
+	
+
+	<script src="js/vue.js"></script>
+	
+	<script src="js/app.js"></script>
+
+
+
+    <!-- Librerias y JS -->
+    <script src="js/menu/anime.min.js"></script>
+    <script src="js/menu/main.js"></script>
+
+</body>
+</html>
